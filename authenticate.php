@@ -35,9 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: dashboard.php');
     } else {
         if ($status === 401) {
-            $errno = 1;
+            $errno = ERROR_LOGIN_INCORRECT;
         } else {
-            $errno = 2;
+            $errno = ERROR_LOGIN_PROBLEM;
         }
         header('Location: index.php?error='.$errno);
     }
