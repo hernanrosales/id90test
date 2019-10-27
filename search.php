@@ -52,8 +52,8 @@ $hotels = HotelFinder::findHotels($destination, $checkin, $checkout, $guests);
               <h3 class="card-title"><?php echo $hotel->name ?></h3>
               <p class="card-text">
                 <?php echo $hotel->getCity() ?><br>
-                Precio: <?php echo $hotel->total ?> <br>
-                Valoración: <?php echo $hotel->star_rating ?>/5
+                <strong>Precio:</strong> <?php echo $hotel->getPrice(Hotel::CURRENCY_USD) ?> <br>
+                <strong>Valoración:</strong> <?php echo $hotel->star_rating ?>/5
               </p>
               <a href="#" class="btn btn-primary">Reservar</a>
             </div>
